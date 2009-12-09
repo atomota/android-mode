@@ -99,7 +99,7 @@
   "Run ant task in the project root directory."
   (interactive "sTask: ")
   (android-in-root
-   (compile (concat "ant " task))))
+   (compile (concat "ant " task " -emacs"))))
 
 (defmacro android-defun-ant-task (task)
   `(defun ,(intern (concat "android-ant-" task)) ()
